@@ -10,7 +10,11 @@
   <record id="l10n_chart_de_skr49" model="account.chart.template">
     <field name="name">Deutscher Kontenplan SKR49</field>
     <field name="currency_id" ref="base.EUR"/>
-    <field name="transfer_account_id" ref="chart_skr49_0705"/>
+    <field name="transfer_account_code_prefix">0705</field>
+
+    <field name="cash_account_code_prefix">092</field>
+    <field name="bank_account_code_prefix">094</field>
+    <field name="currency_id" ref="base.EUR"/>
   </record>
   <record id="chart_skr49_0705" model="account.account.template">
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
@@ -715,7 +719,6 @@
     <field name="name">Forderungen aus Lieferungen und Leistungen</field>
     <field name="code">0650</field>
     <field eval="True" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_receivable"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_087')])]" name="tag_ids"/>
@@ -724,7 +727,6 @@
     <field name="name">Forderungen aus Lieferungen und Leistungen</field>
     <field name="code">0651</field>
     <field eval="True" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_receivable"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_087')])]" name="tag_ids"/>
@@ -1397,7 +1399,6 @@
     <field name="name">Abziehbare Vorsteuer aus der Auslagerung von Gegenständen aus einem Umsatzsteuerlager</field>
     <field name="code">0761</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1406,7 +1407,6 @@
     <field name="name">Abziehbare Vorsteuer</field>
     <field name="code">0770</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1415,7 +1415,6 @@
     <field name="name">Abziehbare Vorsteuer 7 %</field>
     <field name="code">0775</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1424,7 +1423,6 @@
     <field name="name">Abziehbare Vorsteuer 19 %</field>
     <field name="code">0780</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1457,7 +1455,6 @@
     <field name="name">Abziehbare Vorsteuer aus innergemeinschaftlichem Erwerb</field>
     <field name="code">0810</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1466,7 +1463,6 @@
     <field name="name">Abziehbare Vorsteuer aus innergemeinschaftlichem Erwerb 19 %</field>
     <field name="code">0811</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1475,7 +1471,6 @@
     <field name="name">Abziehbare Vorsteuer innergemeinschaftlichem Erwerb von Neufahrzeugen von Lieferanten ohne Umsatzsteuer-Identifikationsnummer</field>
     <field name="code">0815</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_099')])]" name="tag_ids"/>
@@ -1492,7 +1487,6 @@
     <field name="name">Aufzuteilende Vorsteuer</field>
     <field name="code">0825</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1501,7 +1495,6 @@
     <field name="name">Aufzuteilende Vorsteuer 7 %</field>
     <field name="code">0830</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1510,7 +1503,6 @@
     <field name="name">Aufzuteilende Vorsteuer nach ⌡⌡ 13a/13b UStG 19 %</field>
     <field name="code">0838</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1519,7 +1511,6 @@
     <field name="name">Aufzuteilende Vorsteuer 19 %</field>
     <field name="code">0835</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1528,7 +1519,6 @@
     <field name="name">Aufzuteilende Vorsteuer ⌡⌡ 13a/13b UStG</field>
     <field name="code">0839</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1537,7 +1527,6 @@
     <field name="name">Aufzuteilende Vorsteuer aus innergemeinschaftlichem Erwerb</field>
     <field name="code">0840</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1554,7 +1543,6 @@
     <field name="name">Aufzuteilende Vorsteuer aus innergemeinschaftlichem Erwerb 19 %</field>
     <field name="code">0844</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_097')])]" name="tag_ids"/>
@@ -1571,7 +1559,6 @@
     <field name="name">Abziehbare Vorsteuer nach ⌡ 13b UStG</field>
     <field name="code">0849</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_100')])]" name="tag_ids"/>
@@ -1580,7 +1567,6 @@
     <field name="name">Abziehbare Vorsteuer nach ⌡ 13b UStG 19 %</field>
     <field name="code">0850</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_100')])]" name="tag_ids"/>
@@ -1589,7 +1575,6 @@
     <field name="name">Vorsteuer in Folgeperiode/im Folgejahr abziehbar</field>
     <field name="code">0853</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_017'), ref('account_tag_skr49_100')])]" name="tag_ids"/>
@@ -1878,7 +1863,6 @@
     <field name="name">Aktive Rechnungsabgrenzung</field>
     <field name="code">0990</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_assets"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_104')])]" name="tag_ids"/>
@@ -2639,7 +2623,6 @@
     <field name="name">Verbindlichkeiten aus Lieferungen und Leistungen</field>
     <field name="code">1340</field>
     <field eval="True" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_payable"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_032'), ref('account_tag_skr49_143')])]" name="tag_ids"/>
@@ -3560,7 +3543,6 @@
     <field name="name">Umsatzsteuer</field>
     <field name="code">1840</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3569,7 +3551,6 @@
     <field name="name">Umsatzsteuer 7 %</field>
     <field name="code">1845</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3578,7 +3559,6 @@
     <field name="name">Umsatzsteuer 19 %</field>
     <field name="code">1850</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3587,7 +3567,6 @@
     <field name="name">Umsatzsteuer aus innergemeinschaftlichem Erwerb</field>
     <field name="code">1860</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3596,7 +3575,6 @@
     <field name="name">Umsatzsteuer innergemeinschaftlicher Erwerb Neufahrzeuge ohne USt-IdNr.</field>
     <field name="code">1861</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3605,7 +3583,6 @@
     <field name="name">Umsatzsteuer aus im Inland steuerpflichtigen Leistungen 7 %</field>
     <field name="code">1864</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3614,7 +3591,6 @@
     <field name="name">Umsatzsteuer aus im Inland steuerpflichtigen Leistungen 19 %</field>
     <field name="code">1865</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3623,7 +3599,6 @@
     <field name="name">Umsatzsteuer aus im Inland steuerpflichtigen EU-Lieferungen</field>
     <field name="code">1866</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3632,7 +3607,6 @@
     <field name="name">Umsatzsteuer aus im anderen EU-Land steuerpflichtigen elektronischen Dienstleistungen</field>
     <field name="code">1869</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_157')])]" name="tag_ids"/>
@@ -3641,7 +3615,6 @@
     <field name="name">Umsatzsteuer aus im anderen EU-Land steuerpflichtigen Lieferungen</field>
     <field name="code">1870</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_157')])]" name="tag_ids"/>
@@ -3650,7 +3623,6 @@
     <field name="name">Umsatzsteuer aus im anderen EU-Land steuerpflichtigen sonstigen Leistungen</field>
     <field name="code">1871</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_157')])]" name="tag_ids"/>
@@ -3659,7 +3631,6 @@
     <field name="name">Umsatzsteuer aus innergemeinschaftlichem Erwerb ohne Vorsteuerabzug</field>
     <field name="code">1872</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3668,7 +3639,6 @@
     <field name="name">Umsatzsteuer aus innergemeinschaftlichem Erwerb 19 %</field>
     <field name="code">1873</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3677,7 +3647,6 @@
     <field name="name">Umsatzsteuer nicht fällig</field>
     <field name="code">1880</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_158')])]" name="tag_ids"/>
@@ -3686,7 +3655,6 @@
     <field name="name">Umsatzsteuer nicht fällig 7 %</field>
     <field name="code">1885</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_158')])]" name="tag_ids"/>
@@ -3695,7 +3663,6 @@
     <field name="name">Umsatzsteuer nicht fällig 19 %</field>
     <field name="code">1890</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_158')])]" name="tag_ids"/>
@@ -3704,7 +3671,6 @@
     <field name="name">Umsatzsteuer nicht fällig aus im Inland steuerpflichtigen EU-Lieferungen</field>
     <field name="code">1895</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_158')])]" name="tag_ids"/>
@@ -3713,7 +3679,6 @@
     <field name="name">Umsatzsteuer nicht fällig aus im Inland steuerpflichtigen EU-Lieferungen 19 %</field>
     <field name="code">1896</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_158')])]" name="tag_ids"/>
@@ -3722,7 +3687,6 @@
     <field name="name">Umsatzsteuer nach ⌡ 13b UStG</field>
     <field name="code">1901</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3731,7 +3695,6 @@
     <field name="name">Umsatzsteuer nach ⌡ 13b UStG, 19 %</field>
     <field name="code">1902</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3740,7 +3703,6 @@
     <field name="name">Umsatzsteuer aus der Auslagerung von Gegenständen aus einem Umsatzsteuerlager</field>
     <field name="code">1905</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_156')])]" name="tag_ids"/>
@@ -3805,7 +3767,6 @@
     <field name="name">Umsatzsteuer in Folgeperiode fällig (⌡⌡ 13 Abs. 1 Nr. 6, 13b Abs. 2 UStG)</field>
     <field name="code">1918</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_160')])]" name="tag_ids"/>
@@ -5038,7 +4999,7 @@
     <field name="name">Ergebnisvortrag aus dem Vorjahr</field>
     <field name="code">3950</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5046,7 +5007,7 @@
     <field name="name">Entnahmen aus gebundenen Rücklagen gem. ⌡ 62 Abs. 1 Nr. 1 u. 2 AO</field>
     <field name="code">3953</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5054,7 +5015,7 @@
     <field name="name">Entnahmen aus freien Rücklagen gem.⌡ 62 Abs. 1 Nr. 3 AO</field>
     <field name="code">3955</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5062,7 +5023,7 @@
     <field name="name">Entnahmen aus Rücklagen zum Erwerb von Gesellschaftsrechten gem. ⌡ 62 Abs. 1 Nr. 4 AO</field>
     <field name="code">3956</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5070,7 +5031,7 @@
     <field name="name">Entnahmen aus sonstigen Rücklagen</field>
     <field name="code">3957</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5078,7 +5039,7 @@
     <field name="name">Einstellungen in gebundene Rücklagen gem. ⌡ 62 Abs. 1 Nr. 1 u. 2 AO</field>
     <field name="code">3963</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5086,7 +5047,7 @@
     <field name="name">Erhöhung des nutzungsgebundenen Kapitals</field>
     <field name="code">3964</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5094,7 +5055,7 @@
     <field name="name">Einstellungen in freie Rücklagen gem. ⌡ 62 Abs. 1 Nr. 3 AO</field>
     <field name="code">3965</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5102,7 +5063,7 @@
     <field name="name">Einstellungen in Rücklagen zum Erwerb von Gesellschaftsrechten gem. ⌡ 62 Abs. 1 Nr. 4 AO</field>
     <field name="code">3966</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5110,7 +5071,7 @@
     <field name="name">Einstellungen in die sonstigen Rücklagen</field>
     <field name="code">3967</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_040'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5118,7 +5079,7 @@
     <field name="name">Entnahmen aus der Kapitalrücklage</field>
     <field name="code">3968</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_041'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5126,7 +5087,7 @@
     <field name="name">Einstellungen in die Kapitalrücklage nach den Vorschriften über die vereinfachte Kapitalherabsetzung</field>
     <field name="code">3969</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_041'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5134,7 +5095,7 @@
     <field name="name">Entnahmen aus der Kapitalerhaltungsrücklage</field>
     <field name="code">3970</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_042'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5142,7 +5103,7 @@
     <field name="name">Verminderung des Stiftungskapitals aus realisierten Vermögensumschichtungen seit 2017 Konto 3961</field>
     <field name="code">3971</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_042'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5150,7 +5111,7 @@
     <field name="name">Entnahmen aus der Ansparrücklage ⌡ 62 Abs. 4 AO</field>
     <field name="code">3974</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_042'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5158,7 +5119,7 @@
     <field name="name">Einstellungen in die Kapitalerhaltungsrücklage</field>
     <field name="code">3975</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_042'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5166,7 +5127,7 @@
     <field name="name">Erhöhung des Stiftungskapitals aus realisierten Vermögensumschichtungen seit 2017 Konto 3961</field>
     <field name="code">3976</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_042'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5174,7 +5135,7 @@
     <field name="name">Einstellungen in die Ansparrücklage ⌡ 62 Abs. 4 AO</field>
     <field name="code">3979</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_042'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5182,7 +5143,7 @@
     <field name="name">Entnahmen aus der gesetzlichen Rücklage</field>
     <field name="code">3980</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5190,7 +5151,7 @@
     <field name="name">Entnahmen aus dem Ausgleichsposten für aktivierte eigene Anteile</field>
     <field name="code">3981</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5198,7 +5159,7 @@
     <field name="name">Entnahmen aus satzungsmäßigen Rücklagen</field>
     <field name="code">3982</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5206,7 +5167,7 @@
     <field name="name">Erträge aus der Kapitalherabsetzung</field>
     <field name="code">3984</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5214,7 +5175,7 @@
     <field name="name">Einstellungen in die gesetzliche Rücklage</field>
     <field name="code">3985</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5223,7 +5184,7 @@
 </field>
     <field name="code">3986</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5231,7 +5192,7 @@
     <field name="name">Einstellungen in satzungsmäßige Rücklagen</field>
     <field name="code">3987</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_043'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5239,7 +5200,7 @@
     <field name="name">Entnahmen aus dem Vereinskapital seit 2017 Konto 3952</field>
     <field name="code">3994</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_044'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5247,7 +5208,7 @@
     <field name="name">Einstellungen in das Vereinskapital seit 2017 Konto 3962</field>
     <field name="code">3996</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_044'), ref('account_tag_skr49_178')])]" name="tag_ids"/>
   </record>
@@ -5615,7 +5576,6 @@
     <field name="name">Ausserordentliche Aufwendungen</field>
     <field name="code">4530</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_expenses"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_047'), ref('account_tag_skr49_186'), ref('account_tag_skr49_002')])]" name="tag_ids"/>
@@ -8384,7 +8344,7 @@
     <field name="name">Umgebuchte Einnahmen B 6000 (Gegenkonto 8980)</field>
     <field name="code">6990</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_216'), ref('account_tag_skr49_006')])]" name="tag_ids"/>
   </record>
@@ -8392,7 +8352,7 @@
     <field name="name">Umgebuchte Ausgaben B 6000 (Gegenkonto 8990)</field>
     <field name="code">6992</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_216'), ref('account_tag_skr49_006')])]" name="tag_ids"/>
   </record>
@@ -9736,7 +9696,6 @@
     <field name="name">Gewährte Skonti</field>
     <field name="code">8047</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_revenue"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_049'), ref('account_tag_skr49_009')])]" name="tag_ids"/>
@@ -9977,7 +9936,6 @@
     <field name="name">Erhaltene Skonti</field>
     <field name="code">8174</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
     <field name="user_type_id" ref="account.data_account_type_expenses"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_051'), ref('account_tag_skr49_234'), ref('account_tag_skr49_009')])]" name="tag_ids"/>
@@ -10778,8 +10736,7 @@
     <field name="name">Saldenvorträge Sachkonten</field>
     <field name="code">9000</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10787,7 +10744,7 @@
     <field name="name">Saldenvorträge, Sachkonten</field>
     <field name="code">9001</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10795,8 +10752,7 @@
     <field name="name">Saldenvorträge Debitoren</field>
     <field name="code">9008</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10804,8 +10760,7 @@
     <field name="name">Saldenvorträge Kreditoren</field>
     <field name="code">9009</field>
     <field eval="False" name="reconcile"/>
-    <field eval="True" name="deprecated"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10813,7 +10768,7 @@
     <field name="name">Offene Posten aus 2000</field>
     <field name="code">9070</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10821,7 +10776,7 @@
     <field name="name">Offene Posten aus 2001</field>
     <field name="code">9071</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10829,7 +10784,7 @@
     <field name="name">Offene Posten aus 2002</field>
     <field name="code">9072</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10837,7 +10792,7 @@
     <field name="name">Offene Posten aus 2003</field>
     <field name="code">9073</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10845,7 +10800,7 @@
     <field name="name">Offene Posten aus 2004</field>
     <field name="code">9074</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10853,7 +10808,7 @@
     <field name="name">Offene Posten aus 2005</field>
     <field name="code">9075</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10861,7 +10816,7 @@
     <field name="name">Offene Posten aus 2006</field>
     <field name="code">9076</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10869,7 +10824,7 @@
     <field name="name">Offene Posten aus 2007</field>
     <field name="code">9077</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10877,7 +10832,7 @@
     <field name="name">Offene Posten aus 2008</field>
     <field name="code">9078</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10885,7 +10840,7 @@
     <field name="name">Offene Posten aus 2009</field>
     <field name="code">9079</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10893,7 +10848,7 @@
     <field name="name">Offene Posten aus 2010</field>
     <field name="code">9080</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10901,7 +10856,7 @@
     <field name="name">Offene Posten aus 2011</field>
     <field name="code">9081</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10909,7 +10864,7 @@
     <field name="name">Offene Posten aus 2012</field>
     <field name="code">9082</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10917,7 +10872,7 @@
     <field name="name">Offene Posten aus 2013</field>
     <field name="code">9083</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10925,7 +10880,7 @@
     <field name="name">Offene Posten aus 2014</field>
     <field name="code">9084</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10933,7 +10888,7 @@
     <field name="name">Offene Posten aus 2015</field>
     <field name="code">9085</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10941,7 +10896,7 @@
     <field name="name">Offene Posten aus 2016</field>
     <field name="code">9086</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10949,7 +10904,7 @@
     <field name="name">Offene Posten aus 2017</field>
     <field name="code">9087</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10957,7 +10912,7 @@
     <field name="name">Offene Posten aus 2018</field>
     <field name="code">9088</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10965,7 +10920,7 @@
     <field name="name">Summenvortragskonto</field>
     <field name="code">9090</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10973,7 +10928,7 @@
     <field name="name">Offene Posten aus 1991</field>
     <field name="code">9091</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10981,7 +10936,7 @@
     <field name="name">Offene Posten aus 1992</field>
     <field name="code">9092</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10989,7 +10944,7 @@
     <field name="name">Offene Posten aus 1993</field>
     <field name="code">9093</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -10997,7 +10952,7 @@
     <field name="name">Offene Posten aus 1994</field>
     <field name="code">9094</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -11005,7 +10960,7 @@
     <field name="name">Offene Posten aus 1995</field>
     <field name="code">9095</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -11013,7 +10968,7 @@
     <field name="name">Offene Posten aus 1996</field>
     <field name="code">9096</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -11021,7 +10976,7 @@
     <field name="name">Offene Posten aus 1997</field>
     <field name="code">9097</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -11029,7 +10984,7 @@
     <field name="name">Offene Posten aus 1998</field>
     <field name="code">9098</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -11037,7 +10992,7 @@
     <field name="name">Offene Posten aus 1999</field>
     <field name="code">9099</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_054')])]" name="tag_ids"/>
   </record>
@@ -11045,7 +11000,7 @@
     <field name="name">Investitionsverbindlichkeiten bei den Leistungsverbindlichkeiten</field>
     <field name="code">9240</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11053,7 +11008,7 @@
     <field name="name">Investitionsverbindlichkeiten aus Sachanlagenkäufen bei Leistungsverbindlichkeiten</field>
     <field name="code">9241</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11061,7 +11016,7 @@
     <field name="name">Investitionsverbindlichkeiten aus Käufen von immateriellen Vermögensgegenständen bei Leistungsverbindlichkeiten</field>
     <field name="code">9242</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11069,7 +11024,7 @@
     <field name="name">Investitionsverbindlichkeiten aus Käufen von Finanzanlagen bei Leistungsverbindlichkeiten</field>
     <field name="code">9243</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11077,7 +11032,7 @@
     <field name="name">Gegenkonto zu Konten 9240-9243</field>
     <field name="code">9244</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11085,7 +11040,7 @@
     <field name="name">Forderungen aus Sachanlagenverkäufen bei sonstigen Vermögensgegenständen</field>
     <field name="code">9245</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11093,7 +11048,7 @@
     <field name="name">Forderungen aus Verkäufen immaterieller Vermögensgegenstände bei sonstigen Vermögensgegenständen</field>
     <field name="code">9246</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11101,7 +11056,7 @@
     <field name="name">Forderungen aus Verkäufen von Finanzanlagen bei sonstigen Vermögensgegenständen</field>
     <field name="code">9247</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11109,7 +11064,7 @@
     <field name="name">Gegenkonto zu Konten 9245-9247</field>
     <field name="code">9249</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_055')])]" name="tag_ids"/>
   </record>
@@ -11117,7 +11072,7 @@
     <field name="name">Gegenkonto zu 9271 - 9279 (Sollbuchung)</field>
     <field name="code">9270</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11125,7 +11080,7 @@
     <field name="name">Verbindlichkeiten aus der Begebung und Übertragung von Wechseln</field>
     <field name="code">9271</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11133,7 +11088,7 @@
     <field name="name">Verbindlichkeiten aus der Begebung und Übertragung von Wechseln gegenüber verbundenen/assoziierten Unternehmen</field>
     <field name="code">9272</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11141,7 +11096,7 @@
     <field name="name">Verbindlichkeiten aus Bürgschaften, Wechsel- und Scheckbürgschaften</field>
     <field name="code">9273</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11149,7 +11104,7 @@
     <field name="name">Verbindlichkeiten aus Bürgschaften, Wechsel- und Scheckbürgschaften gegenüber verbundenen/assoziierten Unternehmen</field>
     <field name="code">9274</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11157,7 +11112,7 @@
     <field name="name">Verbindlichkeiten aus Gewährleistungsverträgen</field>
     <field name="code">9275</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11165,7 +11120,7 @@
     <field name="name">Verbindlichkeiten aus Gewährleistungsverträgen gegenüber verbundenen/assoziierten Unternehmen</field>
     <field name="code">9276</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11173,7 +11128,7 @@
     <field name="name">Haftung aus der Bestellung von Sicherheiten für fremde Verbindlichkeiten</field>
     <field name="code">9277</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11181,7 +11136,7 @@
     <field name="name">Haftung aus der Bestellung von Sicherheiten für fremde Verbindlichkeiten gegenüber verbundenen/assoziierten Unternehmen</field>
     <field name="code">9278</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11189,7 +11144,7 @@
     <field name="name">Verpflichtungen aus Treuhandvermögen</field>
     <field name="code">9279</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_056')])]" name="tag_ids"/>
   </record>
@@ -11197,7 +11152,7 @@
     <field name="name">Gegenkonto zu 9281-9286</field>
     <field name="code">9280</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_057')])]" name="tag_ids"/>
   </record>
@@ -11205,7 +11160,7 @@
     <field name="name">Verpflichtungen aus Miet- und Leasingverträgen</field>
     <field name="code">9281</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_057')])]" name="tag_ids"/>
   </record>
@@ -11213,7 +11168,7 @@
     <field name="name">Andere Verpflichtungen gem. ⌡ 285 Nr. 3a HGB</field>
     <field name="code">9283</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_057')])]" name="tag_ids"/>
   </record>
@@ -11221,7 +11176,7 @@
     <field name="name">Andere Verpflichtungen gem. ⌡ 285 Nr. 3a HGB gegenüber verbundenen Unternehmen</field>
     <field name="code">9284</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_057')])]" name="tag_ids"/>
   </record>
@@ -11229,7 +11184,7 @@
     <field name="name">Unterschiedsbetrag aus der Abzinsung von Altersversorgungsverpflichtungen nach ⌡ 253 Abs. 6 HGB (Haben)</field>
     <field name="code">9285</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_058')])]" name="tag_ids"/>
   </record>
@@ -11237,7 +11192,7 @@
     <field name="name">Gegenkonto zu 9285</field>
     <field name="code">9286</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_058')])]" name="tag_ids"/>
   </record>
@@ -11245,7 +11200,7 @@
     <field name="name">Steuerrechtlicher Ausgleichsposten</field>
     <field name="code">9485</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_058'), ref('account_tag_skr49_241')])]" name="tag_ids"/>
   </record>
@@ -11253,7 +11208,7 @@
     <field name="name">Statistisches Konto für den Gewinnzuschlag nach ⌡⌡ 6b, 6c EStG (Haben)</field>
     <field name="code">9490</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_059')])]" name="tag_ids"/>
   </record>
@@ -11261,7 +11216,7 @@
     <field name="name">Statistisches Konto für den Gewinnzuschlag nach ⌡⌡ 6b, 6c EStG (Soll) - Gegenkonto zu 9490</field>
     <field name="code">9491</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_059')])]" name="tag_ids"/>
   </record>
@@ -11269,7 +11224,7 @@
     <field name="name">Faktor pauschale Vorsteuer 7 %</field>
     <field name="code">9600</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11277,7 +11232,7 @@
     <field name="name">Gegenkonto zu 9600-9618</field>
     <field name="code">9619</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11285,7 +11240,7 @@
     <field name="name">Fiktive Einnahmen aus Leistungen Dritter</field>
     <field name="code">9620</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11293,7 +11248,7 @@
     <field name="name">Fiktive Ausgaben durch Zahlung Dritter</field>
     <field name="code">9621</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11301,7 +11256,7 @@
     <field name="name">Nichtanzusetzende Einnahmen Klasse 7 u. 8 (⌡ 64 III AO)</field>
     <field name="code">9630</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11309,7 +11264,7 @@
     <field name="name">Nichtanzusetzende Einnahmen Klasse 5 (⌡ 67a I AO)</field>
     <field name="code">9631</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11317,7 +11272,7 @@
     <field name="name">Hinzuzurechnende Einnahmen Klasse 7 u. 8 (⌡ 64 III AO)</field>
     <field name="code">9632</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11325,7 +11280,7 @@
     <field name="name">Hinzuzurechnende Einnahmen Klasse 5 (⌡ 67a I AO)</field>
     <field name="code">9633</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11333,7 +11288,7 @@
     <field name="name">Umsatzsteuer Teilbereich 5000 Zweckbetrieb Sport 1</field>
     <field name="code">9650</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11341,7 +11296,7 @@
     <field name="name">Umsatzsteuer Klasse 7</field>
     <field name="code">9651</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11349,7 +11304,7 @@
     <field name="name">Umsatzsteuer Klasse 8</field>
     <field name="code">9652</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11357,7 +11312,7 @@
     <field name="name">Gegenkonto für statistische Buchungen zu 9620 - 9689</field>
     <field name="code">9690</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11365,7 +11320,7 @@
     <field name="name">Freies Statistikkonto für das Zusatzmodul Finanzrechnung</field>
     <field name="code">9700</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11373,7 +11328,7 @@
     <field name="name">Gegenkonto 1 zu 9700-9797</field>
     <field name="code">9798</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11381,7 +11336,7 @@
     <field name="name">Gegenkonto 2 zu 9700-9797</field>
     <field name="code">9799</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11389,7 +11344,7 @@
     <field name="name">Abstimmsummenkonto für den Import von Buchungssätzen</field>
     <field name="code">9800</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11397,7 +11352,7 @@
     <field name="name">Freies Konto für Werte</field>
     <field name="code">9802</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11405,7 +11360,7 @@
     <field name="name">Gegenkonto zu 9802-9828 (Werte)</field>
     <field name="code">9829</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11413,7 +11368,7 @@
     <field name="name">Freies Konto für Menge</field>
     <field name="code">9830</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11421,7 +11376,7 @@
     <field name="name">Gegenkonto zu 9830-9848 (Menge)</field>
     <field name="code">9849</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_061')])]" name="tag_ids"/>
   </record>
@@ -11429,7 +11384,7 @@
     <field name="name">Gegenkonto zu 9882 bis 9889 - für Vereinsergebnis/Stiftungsergebnis/Jahresüberschuss</field>
     <field name="code">9850</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11437,7 +11392,7 @@
     <field name="name">Gegenkonto zu 9882 bis 9889 - für Ergebnisvortrag/Mittelvortrag/Bilanzgewinn</field>
     <field name="code">9860</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11445,7 +11400,7 @@
     <field name="name">Ergebnisse Bereich 2000 und Teilbereich 3200</field>
     <field name="code">9882</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11453,7 +11408,7 @@
     <field name="name">Ergebnisse Bereich 4000 und Teilbereich 3400</field>
     <field name="code">9884</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11461,7 +11416,7 @@
     <field name="name">Ergebnisse Bereich 5000 und Teilbereich 3500</field>
     <field name="code">9885</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11469,7 +11424,7 @@
     <field name="name">Ergebnisse Bereich 6000 und Teilbereich 3600</field>
     <field name="code">9886</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11477,7 +11432,7 @@
     <field name="name">Ergebnisse Bereich 7000 und Teilbereich 3700</field>
     <field name="code">9887</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11485,7 +11440,7 @@
     <field name="name">Ergebnisse Bereich 8000 und Teilbereich 3800</field>
     <field name="code">9888</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11493,7 +11448,7 @@
     <field name="name">Ergebnisvorträge allgemein</field>
     <field name="code">9889</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_062')])]" name="tag_ids"/>
   </record>
@@ -11501,7 +11456,7 @@
     <field name="name">Hinzurechnung Investitionsabzugsbetrag ⌡ 7g Abs. 2 EStG aus dem 2. vorangegangenen Wirtschaftsjahr, außerbilanziell (Haben)</field>
     <field name="code">9966</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11509,7 +11464,7 @@
     <field name="name">Hinzurechnung Investitionsabzugsbetrag ⌡ 7g Abs. 2 EStG aus dem 3. vorangegangenen Wirtschaftsjahr, außerbilanziell (Haben)</field>
     <field name="code">9967</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11517,7 +11472,7 @@
     <field name="name">Rückgängigmachung Investitionsabzugsbetrag ⌡ 7g Abs. 3, 4 EStG im 2. vorangegangenen Wirtschaftsjahr</field>
     <field name="code">9968</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11525,7 +11480,7 @@
     <field name="name">Rückgängigmachung Investitionsabzugsbetrag ⌡ 7g Abs. 3, 4 EStG im 3. vorangegangenen Wirtschaftsjahr</field>
     <field name="code">9969</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11533,7 +11488,7 @@
     <field name="name">Investitionsabzugsbetrag ⌡ 7g Abs. 1 EStG, ausserbilanziell (Soll)</field>
     <field name="code">9970</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11541,7 +11496,7 @@
     <field name="name">Investitionsabzugsbetrag ⌡ 7g Abs. 1 EStG, ausserbilanziell (Haben) - Gegenkonto zu 9970</field>
     <field name="code">9971</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11549,7 +11504,7 @@
     <field name="name">Hinzurechnung Investitionsabzugsbetrag ⌡ 7g Abs. 2 EStG aus dem vorangegangenen Wirtschaftsjahr, außerbilanziell (Haben)</field>
     <field name="code">9972</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11557,7 +11512,7 @@
     <field name="name">Hinzurechnung Investitionsabzugsbetrag ⌡ 7g Abs. 2 EStG aus den vorangegangenen Wirtschaftsjahren, außerbilanziell (Soll) - Gegenkonto zu 9972, 9966, 9967</field>
     <field name="code">9973</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11565,7 +11520,7 @@
     <field name="name">Rückgängigmachung Investitionsabzugsbetrag ⌡ 7g Abs. 3, 4 EStG im vorangegangenen Wirtschaftsjahr</field>
     <field name="code">9974</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11573,7 +11528,7 @@
     <field name="name">Rückgängigmachung Investitionsabzugsbetrag ⌡ 7g Abs. 3, 4 EStG in den vorangegangenen Wirtschaftsjahren - Gegenkonto zu 9974, 9968, 9969</field>
     <field name="code">9975</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_063')])]" name="tag_ids"/>
   </record>
@@ -11581,7 +11536,7 @@
     <field name="name">Erträge von außergewöhnlicher Größenordnung oder Bedeutung</field>
     <field name="code">9990</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
@@ -11589,7 +11544,7 @@
     <field name="name">Erträge (aperiodisch)</field>
     <field name="code">9991</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
@@ -11597,7 +11552,7 @@
     <field name="name">Erträge von außergewöhnlicher Größenordnung oder Bedeutung (aperiodisch)</field>
     <field name="code">9992</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
@@ -11605,7 +11560,7 @@
     <field name="name">Aufwendungen von außergewöhnlicher Größenordnung oder Bedeutung</field>
     <field name="code">9993</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
@@ -11613,7 +11568,7 @@
     <field name="name">Aufwendungen (aperiodisch)</field>
     <field name="code">9994</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
@@ -11621,7 +11576,7 @@
     <field name="name">Aufwendungen von außergewöhnlicher Größenordnung oder Bedeutung (aperiodisch)</field>
     <field name="code">9995</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
@@ -11629,7 +11584,7 @@
     <field name="name">Gegenkonto zu 9990-9997</field>
     <field name="code">9998</field>
     <field eval="False" name="reconcile"/>
-    <field name="user_type_id" ref="l10n_de.account_type_other"/>
+    <field name="user_type_id" ref="account.data_account_type_other_income"/>
     <field name="chart_template_id" ref="l10n_chart_de_skr49"/>
     <field eval="[(6,0,[ref('account_tag_skr49_064')])]" name="tag_ids"/>
   </record>
